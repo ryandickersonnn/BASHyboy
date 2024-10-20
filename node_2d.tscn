@@ -1,0 +1,99 @@
+[gd_scene load_steps=14 format=3 uid="uid://biu5to88kb76f"]
+
+[ext_resource type="Script" path="res://scripts/terminalInput.gd" id="1_etoij"]
+[ext_resource type="Texture2D" uid="uid://bh10psmk01rch" path="res://Gray.png" id="2_fw3is"]
+[ext_resource type="FontFile" uid="uid://dhfxkxtkknxji" path="res://font/robotText.ttf" id="3_5hw6f"]
+[ext_resource type="PackedScene" uid="uid://dlbyma6apvrdp" path="res://mainCharacter.tscn" id="4_yypyi"]
+[ext_resource type="Script" path="res://scripts/main_character.gd" id="5_pt0ii"]
+[ext_resource type="PackedScene" uid="uid://ysvr6lnt8ujf" path="res://file.tscn" id="7_7yumu"]
+[ext_resource type="Texture2D" uid="uid://osmbdqhr08pv" path="res://art/bashy.png" id="7_8qakt"]
+[ext_resource type="Texture2D" uid="uid://bg3arqylhp7pv" path="res://art/pixil-frame-0.png" id="7_vmhyw"]
+[ext_resource type="Texture2D" uid="uid://gv8wkjgnomaa" path="res://art/slimeBoss.png" id="8_5h7i2"]
+[ext_resource type="Script" path="res://scripts/hearts.gd" id="9_k8uid"]
+[ext_resource type="Texture2D" uid="uid://5u4fsibtsjq3" path="res://art/heart.png" id="9_ufjgg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kicea"]
+
+[sub_resource type="Theme" id="Theme_xloyn"]
+Label/constants/outline_size = 0
+Label/styles/normal = SubResource("StyleBoxFlat_kicea")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_etoij")
+file_scene = ExtResource("7_7yumu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 1202.0
+offset_bottom = 695.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fw3is")
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 27.0
+offset_top = 183.0
+offset_right = 390.0
+offset_bottom = 552.0
+theme = SubResource("Theme_xloyn")
+theme_override_fonts/font = ExtResource("3_5hw6f")
+autowrap_mode = 1
+
+[node name="MainCharacter" parent="." instance=ExtResource("4_yypyi")]
+position = Vector2(781, 465)
+scale = Vector2(0.776011, 0.98101)
+script = ExtResource("5_pt0ii")
+
+[node name="Sprite2D" parent="MainCharacter" index="0"]
+position = Vector2(32.4633, 76.237)
+scale = Vector2(2, 2)
+texture = ExtResource("7_8qakt")
+
+[node name="FileSystem" type="Node2D" parent="."]
+
+[node name="File" parent="FileSystem" instance=ExtResource("7_7yumu")]
+visible = false
+position = Vector2(791, 352)
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 30.0
+offset_top = 557.0
+offset_right = 392.0
+offset_bottom = 604.0
+scale = Vector2(0.991449, 0.994569)
+
+[node name="LaserBeam" type="Sprite2D" parent="."]
+position = Vector2(568, -109)
+scale = Vector2(2, 2)
+texture = ExtResource("7_vmhyw")
+
+[node name="SlimeBoss" type="Sprite2D" parent="."]
+position = Vector2(769, 101)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("8_5h7i2")
+
+[node name="Hearts" type="Node2D" parent="."]
+script = ExtResource("9_k8uid")
+
+[node name="Heart1" type="Sprite2D" parent="Hearts"]
+position = Vector2(388, 36)
+scale = Vector2(0.119195, 0.119195)
+texture = ExtResource("9_ufjgg")
+
+[node name="Heart2" type="Sprite2D" parent="Hearts"]
+position = Vector2(469, 35)
+scale = Vector2(0.119195, 0.119195)
+texture = ExtResource("9_ufjgg")
+
+[node name="Heart3" type="Sprite2D" parent="Hearts"]
+position = Vector2(551, 34)
+scale = Vector2(0.119195, 0.119195)
+texture = ExtResource("9_ufjgg")
+
+[editable path="MainCharacter"]

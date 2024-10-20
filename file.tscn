@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ysvr6lnt8ujf"]
+
+[ext_resource type="Texture2D" uid="uid://dfs5xgcqff4hg" path="res://art/fileArt2.png" id="1_f6x4a"]
+[ext_resource type="FontFile" uid="uid://dhfxkxtkknxji" path="res://font/robotText.ttf" id="2_a0i42"]
+
+[node name="File" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_f6x4a")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -23.0
+offset_top = 35.0
+offset_right = 29.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("2_a0i42")
+text = "FILE"

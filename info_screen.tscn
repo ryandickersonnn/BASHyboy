@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://oj7sxursjm40"]
+
+[ext_resource type="Script" path="res://info_screen.gd" id="1_01jiv"]
+[ext_resource type="FontFile" uid="uid://dhfxkxtkknxji" path="res://font/robotText.ttf" id="2_m5801"]
+
+[node name="InfoScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_01jiv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 32.0
+offset_right = 1071.0
+offset_bottom = 578.0
+color = Color(0, 0, 0, 1)
+
+[node name="Header" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 111.0
+offset_top = 66.0
+offset_right = 1031.0
+offset_bottom = 219.0
+theme_override_fonts/font = ExtResource("2_m5801")
+theme_override_font_sizes/font_size = 40
+text = "        WELCOME TO BASHybot
+ 
+
+"
+
+[node name="Body" type="Label" parent="."]
+layout_mode = 0
+offset_left = 174.0
+offset_top = 161.0
+offset_right = 1005.0
+offset_bottom = 494.0
+theme_override_fonts/font = ExtResource("2_m5801")
+theme_override_font_sizes/font_size = 20
+text = "Welcome to BASHybot. This is a game about learning how to level up your skills with bash. You will complete a series of challenges navigating around an imaginary file system fighting enemies using your newly acquired bash skills. If you are new to bash it may take a little time to get used to it but i have faith in you. If you are ever stuck you can type in \"man\" to get a list of available functions and how to use them. Remember \"man\" can help you. Good luck <3 "
+autowrap_mode = 2
+
+[node name="startGameButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 423.0
+offset_right = 865.0
+offset_bottom = 516.0
+theme_override_fonts/font = ExtResource("2_m5801")
+theme_override_font_sizes/font_size = 50
+text = "START GAME"
+
+[connection signal="pressed" from="startGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="startGameButton" to="." method="_on_button_pressed"]
