@@ -283,11 +283,14 @@ func execute_file(file_name: String):
 			elif file["permissions"]["execute"] and file["specialFunction"] == "old":
 				return "This missile is out of date. Try another one"
 			elif file["permissions"]["execute"] and file["specialFunction"] == "condSet":
-				if file["content"].to_lower() == "slimedie" and pushed:
-					missleSend = true
-					return "Missle Code confirmed launch the missile"
+				if pushed:
+					if file["content"].to_lower() == "slimedie":
+						missleSend = true
+						return "Missle Code confirmed launch the missile"
+					else:
+						return "Missle Code Incorrect"
 				else:
-					return "Incorrect Missle Code launch denied"
+					return "Need to push to remove environment"
 			elif file["permissions"]["execute"] and file["specialFunction"] == "condLaunch":
 				if missleSend:
 					laser_beam.position = Vector2(1000, 250)

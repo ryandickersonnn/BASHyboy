@@ -121,7 +121,7 @@ var file_system = {
 				"Subdirectories": {"gitRepo": {  # Changed "Subdirectory 1" to "subdirectory 1"
 						"Files": [{
 						"name": "launcher.py", 
-						"content": "Experimental Missile. Only for Dr. Curry's Use.", 
+						"content": "Experimental Missile. Only for Dr. Curry's Use. Launch Code required.", 
 						"permissions": {"read": true, "write": true, "execute": true}, 
 						"specialFunction": "condLaunch"
 						},{
@@ -131,7 +131,7 @@ var file_system = {
 						"specialFunction": "condSet"
 						},{
 						"name": "instructions.txt", 
-						"content": "We need to input the password Haskell Curry set in order to send this missle. Search around and put it in the launchCode then push to the remote branch.", 
+						"content": "We need to input the password Haskell Curry set in order to send this missle. Search around and put it in the launchCode then push to the remote branch. Then we can run the launch code file to set the permissions and finally shoot the beam.", 
 						"permissions": {"read": true, "write": false, "execute": false}, 
 						"specialFunction": "old"
 						},
