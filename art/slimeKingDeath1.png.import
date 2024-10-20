@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4tqnm0ppemqb"
-path="res://.godot/imported/slimeBoss.png-212b66e9b11a89eb44a2013152acb39f.ctex"
+uid="uid://elwx8r21bry3"
+path="res://.godot/imported/slimeKingDeath1.png-cdec6813ec7c93846a6d9f67ffb0cf74.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/slimeBoss.png"
-dest_files=["res://.godot/imported/slimeBoss.png-212b66e9b11a89eb44a2013152acb39f.ctex"]
+source_file="res://art/slimeKingDeath1.png"
+dest_files=["res://.godot/imported/slimeKingDeath1.png-cdec6813ec7c93846a6d9f67ffb0cf74.ctex"]
 
 [params]
 

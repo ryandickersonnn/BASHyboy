@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhufox8u225gi"]
+
+[ext_resource type="FontFile" uid="uid://dhfxkxtkknxji" path="res://font/robotText.ttf" id="1_uaq5b"]
+[ext_resource type="Texture2D" uid="uid://osmbdqhr08pv" path="res://art/bashy.png" id="2_dusde"]
+
+[node name="Victory" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1183.0
+offset_bottom = 1183.0
+color = Color(0.18, 0.18, 0.18, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 313.0
+offset_top = 31.0
+offset_right = 846.0
+offset_bottom = 161.0
+theme_override_fonts/font = ExtResource("1_uaq5b")
+theme_override_font_sizes/font_size = 100
+text = "Victory!
+"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 34.0
+offset_top = 169.0
+offset_right = 1122.0
+offset_bottom = 612.0
+theme_override_fonts/font = ExtResource("1_uaq5b")
+theme_override_font_sizes/font_size = 25
+text = "Congratulations you saved the file system from the evil slime king. All of those bash commands really helped you manage your files. I hope that now when something less serious than the evil slime king attacking you comes up you have the skills to combat it using just your command line. I truly hoped you learn something and understand the importance of bash and how important it is to us programmers. Thank you very much for playing.
+
+Sincerely,
+Ryan and Bashy"
+autowrap_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(708, 515)
+scale = Vector2(1.83, 1.83)
+texture = ExtResource("2_dusde")

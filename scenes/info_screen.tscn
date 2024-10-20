@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://oj7sxursjm40"]
 
-[ext_resource type="Script" path="res://info_screen.gd" id="1_01jiv"]
+[ext_resource type="Script" path="res://scripts/info_screen.gd" id="1_01jiv"]
 [ext_resource type="FontFile" uid="uid://dhfxkxtkknxji" path="res://font/robotText.ttf" id="2_m5801"]
 
 [node name="InfoScreen" type="Control"]

@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgs86vx5poahr"]
+
+[ext_resource type="Script" path="res://scripts/game_over.gd" id="1_grwcb"]
+[ext_resource type="FontFile" uid="uid://dhfxkxtkknxji" path="res://font/robotText.ttf" id="2_uwfmk"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_grwcb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1183.0
+offset_bottom = 1183.0
+color = Color(0.18, 0.18, 0.18, 1)
+
+[node name="PlayAgain" type="Button" parent="."]
+layout_mode = 0
+offset_left = 275.0
+offset_top = 468.0
+offset_right = 950.0
+offset_bottom = 599.0
+theme_override_fonts/font = ExtResource("2_uwfmk")
+theme_override_font_sizes/font_size = 100
+text = "PLAY AGAIN"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 126.0
+offset_right = 1257.0
+offset_bottom = 477.0
+theme_override_fonts/font = ExtResource("2_uwfmk")
+theme_override_font_sizes/font_size = 180
+text = "GAME OVER"
+
+[connection signal="pressed" from="PlayAgain" to="." method="_on_play_again_pressed"]
